@@ -1,6 +1,6 @@
 # 02 · Gerenciamento de pacotes
 
-[← Instalação](01-instalacao.md) · [README](../README.md) · [Rede →](03-rede.md)
+[← Rede](01-rede.md) · [README](../README.md) · [Usuários →](04-usuarios.md)
 
 ## Conceitos
 

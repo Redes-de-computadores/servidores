@@ -16,28 +16,26 @@ Você pode começar mesmo que nunca tenha administrado um sistema Linux. Neste g
 | Ordem | Capítulo | Ao concluir, você conseguirá… |
 | :---: | --- | --- |
 | 00 | [Instalação do Debian 13 e Laboratório](capitulos/00-instalacao.md) | Instalar o Debian 13 (Trixie) passo a passo com imagens oficiais e preparar a VM |
-| 01 | [Instalação do Debian e interface gráfica](capitulos/01-instalacao.md) | Instalar uma VM e preparar o primeiro acesso |
+| 01 | [Configurações de rede](capitulos/01-rede.md) | Configurar IP estático, gateway, DNS, interfaces e diagnóstico por camadas |
 | 02 | [Gerenciamento de pacotes](capitulos/02-pacotes.md) | Instalar, atualizar e investigar programas |
-| 03 | [Configurações de rede](capitulos/03-rede.md) | Configurar IP, gateway e resolução de nomes |
-| 04 | [Usuários, grupos e permissões](capitulos/04-usuarios.md) | Administrar contas e compartilhar diretórios |
-| 05 | [Acesso remoto com SSH](capitulos/05-ssh.md) | Acessar o servidor com autenticação por chave |
-| 06 | [Firewall com nftables e pfSense](capitulos/06-firewall.md) | Filtrar tráfego e proteger o acesso administrativo |
-| 07 | [DHCP com Kea](capitulos/07-dhcp.md) | Distribuir configurações de rede aos clientes |
-| 08 | [Backup e agendamento](capitulos/08-backup.md) | Criar, agendar e restaurar uma cópia de arquivos |
-| 09 | [Transferência de arquivos: SFTP e FTP](capitulos/09-arquivos.md) | Transferir arquivos e distinguir os protocolos |
-| 10 | [Logs e MariaDB](capitulos/10-logs-mariadb.md) | Investigar eventos e registrar mensagens em banco |
-| 11 | [Segurança e diagnóstico](capitulos/11-seguranca.md) | Revisar a exposição e resolver falhas por evidências |
-| 12 | [Domínio com Univention Corporate Server](capitulos/12-ucs.md) | Montar um domínio de laboratório e validar o DNS |
+| 03 | [Usuários, grupos e permissões](capitulos/04-usuarios.md) | Administrar contas e compartilhar diretórios |
+| 04 | [Acesso remoto com SSH](capitulos/05-ssh.md) | Acessar o servidor com autenticação por chave |
+| 05 | [Firewall com nftables e pfSense](capitulos/06-firewall.md) | Filtrar tráfego e proteger o acesso administrativo |
+| 06 | [DHCP com Kea](capitulos/07-dhcp.md) | Distribuir configurações de rede aos clientes |
+| 07 | [Backup e agendamento](capitulos/08-backup.md) | Criar, agendar e restaurar uma cópia de arquivos |
+| 08 | [Transferência de arquivos: SFTP e FTP](capitulos/09-arquivos.md) | Transferir arquivos e distinguir os protocolos |
+| 09 | [Logs e MariaDB](capitulos/10-logs-mariadb.md) | Investigar eventos e registrar mensagens em banco |
+| 10 | [Segurança e diagnóstico](capitulos/11-seguranca.md) | Revisar a exposição e resolver falhas por evidências |
+| 11 | [Domínio com Univention Corporate Server](capitulos/12-ucs.md) | Montar um domínio de laboratório e validar o DNS |
 
 ```mermaid
 flowchart LR
-    A[Laboratório] --> B[Debian e pacotes]
-    B --> C[Rede e usuários]
-    C --> D[SSH e firewall]
-    D --> E[DHCP e arquivos]
-    D --> F[Backup e logs]
-    E --> G[Segurança e domínio UCS]
-    F --> G
+    A[Instalação e Rede] --> B[Pacotes e Usuários]
+    B --> C[SSH e Firewall]
+    C --> D[DHCP e Arquivos]
+    C --> E[Backup e Logs]
+    D --> F[Segurança e Domínio UCS]
+    E --> F
 ```
 
 ## Como usar os procedimentos
