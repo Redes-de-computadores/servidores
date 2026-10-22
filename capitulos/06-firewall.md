@@ -1,6 +1,6 @@
 # 06 · Firewall com nftables e pfSense
 
-[← SSH](05-ssh.md) · [README](../README.md) · [DHCP →](07-dhcp.md)
+[← Usuários](04-usuarios.md) · [README](../README.md) · [DHCP →](07-dhcp.md)
 
 ## Dois papéis diferentes
 

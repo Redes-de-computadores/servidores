@@ -1,6 +1,6 @@
 # 04 · Usuários, grupos e permissões
 
-[← Pacotes](02-pacotes.md) · [README](../README.md) · [SSH →](05-ssh.md)
+[← SSH](03-ssh.md) · [README](../README.md) · [Firewall →](06-firewall.md)
 
 ## Conceitos e objetivo
 

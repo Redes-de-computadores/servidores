@@ -1,6 +1,6 @@
 # 02 · Gerenciamento de pacotes
 
-[← Rede](01-rede.md) · [README](../README.md) · [Usuários →](04-usuarios.md)
+[← Rede](01-rede.md) · [README](../README.md) · [SSH →](03-ssh.md)
 
 ## Conceitos
 

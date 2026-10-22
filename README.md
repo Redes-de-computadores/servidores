@@ -18,8 +18,8 @@ Você pode começar mesmo que nunca tenha administrado um sistema Linux. Neste g
 | 00 | [Instalação do Debian 13 e Laboratório](capitulos/00-instalacao.md) | Instalar o Debian 13 (Trixie) passo a passo com imagens oficiais e preparar a VM |
 | 01 | [Configurações de rede](capitulos/01-rede.md) | Configurar IP estático, gateway, DNS, interfaces e diagnóstico por camadas |
 | 02 | [Gerenciamento de pacotes](capitulos/02-pacotes.md) | Instalar, atualizar e investigar programas |
-| 03 | [Usuários, grupos e permissões](capitulos/04-usuarios.md) | Administrar contas e compartilhar diretórios |
-| 04 | [Acesso remoto com SSH](capitulos/05-ssh.md) | Acessar o servidor com autenticação por chave |
+| 03 | [Acesso remoto com SSH](capitulos/03-ssh.md) | Acessar o servidor com autenticação por par de chaves e transferir arquivos |
+| 04 | [Usuários, grupos e permissões](capitulos/04-usuarios.md) | Administrar contas, grupos e compartilhar diretórios departamentais |
 | 05 | [Firewall com nftables e pfSense](capitulos/06-firewall.md) | Filtrar tráfego e proteger o acesso administrativo |
 | 06 | [DHCP com Kea](capitulos/07-dhcp.md) | Distribuir configurações de rede aos clientes |
 | 07 | [Backup e agendamento](capitulos/08-backup.md) | Criar, agendar e restaurar uma cópia de arquivos |
@@ -30,11 +30,11 @@ Você pode começar mesmo que nunca tenha administrado um sistema Linux. Neste g
 
 ```mermaid
 flowchart LR
-    A[Instalação e Rede] --> B[Pacotes e Usuários]
-    B --> C[SSH e Firewall]
-    C --> D[DHCP e Arquivos]
-    C --> E[Backup e Logs]
-    D --> F[Segurança e Domínio UCS]
+    A[00 Instalação e 01 Rede] --> B[02 Pacotes e 03 SSH]
+    B --> C[04 Usuários e 05 Firewall]
+    C --> D[06 DHCP e 08 Arquivos]
+    C --> E[07 Backup e 09 Logs]
+    D --> F[10 Segurança e 11 UCS]
     E --> F
 ```
 
