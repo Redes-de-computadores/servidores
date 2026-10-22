@@ -1,0 +1,36 @@
+﻿Servidores Linux
+Pesquisar o site
+Arquivos incorporados
+Pular para o conteúdo principal
+Pular para a navegação
+Servidores Linux
+Página inicial
+10 - FIREWALL
+PfSense
+01 - General Setup
+NFT
+02 - Gerenciamento de pacotes
+04 - Usuários e Grupos
+01 - Configurações de rede
+00 - Instalação - Debian 10
+Boot USB
+00-2 Interface Gráfica
+03 - Acesso Remoto SSH
+Backup e Agendamento
+15 - FTP
+19 - Segurança
+6 - DHCP
+11 - B - Registro de Logs - MariaDB
+23 - UCS DC
+Servidores Linux
+Servidores
+Configurações avançadas
+System >> advanced
+Desabilitar IPV6
+System >> Advanced >> Networking
+Iremos configurar as opções da seguinte forma
+Allow IPv6  >> desmarcar
+ARP Handling  >> marcar
+Página atualizada
+Sites do Google
+Denunciar abuso
