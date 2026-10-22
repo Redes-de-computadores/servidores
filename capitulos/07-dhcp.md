@@ -16,7 +16,7 @@ sequenceDiagram
     S->>C: ACK e prazo de concessão
 ```
 
-O ISC DHCP antigo chegou ao fim de vida no projeto de origem. Para um novo laboratório, usamos Kea, sem afirmar que a configuração antiga pode ser copiada diretamente. Fonte: [aviso oficial do ISC](https://www.isc.org/dhcp/). No Debian 13, o pacote é [kea-dhcp4-server](https://packages.debian.org/stable/net/kea-dhcp4-server).
+Vamos usar o Kea para distribuir endereços aos clientes. Ele substitui o ISC DHCP, cujo desenvolvimento foi encerrado. Se você já conhece o ISC DHCP, observe que o formato de configuração do Kea é diferente. Fonte: [aviso oficial do ISC](https://www.isc.org/dhcp/). No Debian 13, o pacote é [kea-dhcp4-server](https://packages.debian.org/stable/net/kea-dhcp4-server).
 
 ## Pré-requisitos
 

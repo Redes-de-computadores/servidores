@@ -10,7 +10,7 @@
 | FTPS | FTP com TLS | Controle e dados; requer certificado e planejamento de portas |
 | SFTP | Canal SSH cifrado | Normalmente TCP 22; protocolo distinto de FTP |
 
-O índice original inclui FTP. Para a prática principal, usaremos **SFTP**, aproveitando SSH já configurado. Não é necessário instalar um servidor FTP ou abrir outra porta. Uma aplicação que exige FTP não passa a funcionar com SFTP apenas por mudar a porta: ambos os lados precisam suportar o protocolo escolhido.
+Nesta atividade, você vai transferir arquivos com **SFTP**, aproveitando o SSH configurado no capítulo 05. Não é necessário instalar um servidor FTP ou abrir outra porta. Uma aplicação que exige FTP não passa a funcionar com SFTP apenas por mudar a porta: ambos os lados precisam suportar o protocolo escolhido.
 
 ## Pré-requisitos
 

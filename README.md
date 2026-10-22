@@ -1,18 +1,15 @@
 # 🐧 Servidores Linux — guia de estudos
 
-**Do primeiro terminal à administração de serviços em rede.** Material em português, organizado para estudo e prática em máquinas virtuais.
-
-> [!NOTE]
-> Referência técnica: **Debian 13 (Trixie)**. Revisão documental: **22/10/2026**. O material de origem é identificado pelo solicitante como sendo de 2024. Consulte a [origem e as atualizações](docs/atualizacoes.md) para entender o que foi preservado e reescrito.
+**Do primeiro terminal à administração de serviços em rede.** Aprenda a instalar, configurar e administrar servidores com explicações e atividades práticas em máquinas virtuais.
 
 ## Comece por aqui
 
 Um servidor é um computador que oferece serviços a outros computadores: distribuir endereços de rede, receber arquivos ou autenticar usuários, por exemplo. Linux é o núcleo do sistema; Debian é uma distribuição que reúne esse núcleo, programas e um gerenciador de pacotes.
 
-Não é necessário conhecer administração Linux para começar. Você precisará de um computador capaz de executar máquinas virtuais, acesso à internet para baixar os programas e tempo para repetir os exercícios. A configuração sugerida de cada VM é uma escolha didática, não um requisito mínimo oficial.
+Você pode começar mesmo que nunca tenha administrado um sistema Linux. Neste guia, vamos usar o Debian 13 (Trixie). Você precisará de um computador capaz de executar máquinas virtuais, acesso à internet para baixar os programas e tempo para repetir os exercícios. A configuração sugerida de cada VM é uma escolha didática, não um requisito mínimo oficial.
 
 > [!IMPORTANT]
-> Execute os comandos **dentro das VMs Linux**, salvo quando um bloco estiver identificado como PowerShell. Os procedimentos não devem ser executados diretamente no computador Windows que armazena este repositório.
+> Execute os comandos **dentro das VMs Linux**, salvo quando um bloco estiver identificado como PowerShell. Use o computador principal para acompanhar a leitura e o console das VMs para realizar as atividades.
 
 ## 📚 Trilha de aprendizagem
 
@@ -74,8 +71,6 @@ Os blocos `bash` contêm comandos para o terminal Linux; blocos `ini`, `json`, `
 - [ ] Transferir um arquivo com SFTP e conferir sua integridade.
 - [ ] Criar um usuário de domínio e testar sua autenticação.
 
-## Escopo e referências
+## Para aprofundar os estudos
 
-Este guia usa o índice de [Servidores Linux.html](Servidores%20Linux.html) como base temática. O HTML contém a página inicial, sete capturas do pfSense e links para capítulos externos; **não contém o texto desses capítulos**. Portanto, os procedimentos adicionais são uma elaboração didática, não uma transcrição integral. O original e suas imagens foram preservados.
-
-As instruções foram revisadas documentalmente; **não foram executadas em VMs neste ambiente Windows**. Cada capítulo inclui validações para a prática. A [lista de referências](docs/referencias.md) reúne as fontes oficiais consultadas. A versão estável escolhida foi conferida na [página de versões do Debian](https://www.debian.org/releases/).
+Ao longo dos capítulos, você encontrará links para a documentação dos programas utilizados. A [lista de referências](docs/referencias.md) reúne esses materiais para consulta durante as atividades.

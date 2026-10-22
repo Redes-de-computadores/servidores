@@ -25,11 +25,11 @@ O IP LAN de fábrica pode ser diferente do adotado aqui; este guia o altera deli
 
 Antes de restringir a LAN, crie uma regra que permita do cliente administrativo para o endereço LAN do firewall TCP 443. As regras de interface são avaliadas no tráfego que **entra por aquela interface**, e sua ordem importa. Teste navegação, DNS e administração antes e depois da mudança. Não publique a interface administrativa na WAN.
 
-### Atualização das capturas antigas
+### Proteger o acesso administrativo
 
-As imagens do HTML servem como registro histórico, não como checklist de segurança atual:
+Antes de concluir a configuração, confira as opções abaixo. Algumas caixas desativam uma proteção quando são marcadas; leia o nome completo de cada opção.
 
-| Item visível no original | Conduta neste guia |
+| Opção | Como configurar e o que observar |
 | --- | --- |
 | HTTPS na administração | Manter HTTPS e planejar certificado confiável |
 | Desabilitar logs de logins bem-sucedidos | Manter registro para auditoria |
@@ -42,15 +42,6 @@ As imagens do HTML servem como registro histórico, não como checklist de segur
 **System > Advanced > Admin Access** concentra opções administrativas. As recomendações sobre HTTPS, logs, nomes alternativos e SSH seguem o [manual de acesso administrativo](https://docs.netgate.com/pfsense/en/latest/config/advanced-admin.html); exceções DNS devem ser específicas, conforme [DNS Rebinding Protections](https://docs.netgate.com/pfsense/en/latest/services/dns/rebinding.html).
 
 Em **System > Advanced > Networking**, não use supressão ARP como correção de topologia nem trate `Allow IPv6` como chave geral de desativação de IPv6. Consulte [Advanced Networking](https://docs.netgate.com/pfsense/en/latest/config/advanced-networking.html). Este laboratório usa IPv4 para os exemplos, mas o planejamento de segurança também deve considerar IPv6.
-
-<details>
-<summary>Ver uma captura histórica do material original</summary>
-
-![Captura histórica: opções de DNS e HTTP com proteções desativadas; não reproduzir como padrão](../Servidores%20Linux_files/unnamed%281%29.png)
-
-A captura foi preservada para comparação; o texto acima explica as correções.
-
-</details>
 
 Exporte uma cópia da configuração em **Diagnostics > Backup & Restore** após validar o gateway. Proteja esse arquivo: ele pode conter informações sensíveis. Não desative a regra anti-lockout antes de ter outra regra de acesso testada e console disponível.
 

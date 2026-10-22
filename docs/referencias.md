@@ -1,8 +1,8 @@
 # Referências oficiais
 
-[← README](../README.md) · [Origem e atualizações](atualizacoes.md)
+[← README](../README.md)
 
-Consulta documental: **22/10/2026**. Os links abaixo sustentam as decisões técnicas; os exemplos e a sequência didática foram elaborados para este laboratório. Páginas `latest` e `stable` podem mudar de versão com o tempo.
+Use estas referências para aprofundar os assuntos e consultar opções que vão além das atividades. Ao abrir uma página, confira a versão do programa: endereços com `latest` ou `stable` podem apresentar versões diferentes da instalada na sua VM.
 
 | Assunto | Fonte | Uso no guia |
 | --- | --- | --- |
@@ -30,8 +30,6 @@ Consulta documental: **22/10/2026**. Os links abaixo sustentam as decisões téc
 | UCS | [Quick start UCS 5.2](https://docs.software-univention.de/quickstart/5.2/en/index.html) | Instalação e funções de domínio |
 | UCS completo | [Manual UCS 5.2 em PDF](https://docs.software-univention.de/manual/5.2/en/manual.pdf) | DNS, funções e associação |
 
-Algumas páginas da wiki Debian limitaram o acesso direto da ferramenta de consulta; a página SourcesList também foi conferida pelo resultado indexado. A referência de atualizações automáticas é fornecida para consulta complementar; valide as opções no pacote instalado.
-
 ## Manuais da versão instalada
 
 As páginas upstream podem descrever versões mais novas. Consulte também os manuais locais, instalando `man-db` quando necessário:
@@ -52,4 +50,4 @@ man rsyslog.conf
 man mariadb-dump
 ```
 
-Um manual pode não estar disponível se o pacote correspondente não estiver instalado. Consulte `dpkg -L nome-do-pacote` para localizar documentação e exemplos. Para completar a referência histórica, veja o [HTML local original](../Servidores%20Linux.html); links externos presentes nele não significam que seu conteúdo foi recuperado.
+Um manual pode não estar disponível se o pacote correspondente não estiver instalado. Consulte `dpkg -L nome-do-pacote` para localizar documentação e exemplos.

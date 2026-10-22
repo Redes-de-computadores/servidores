@@ -8,7 +8,7 @@ Um **domínio de identidade** reúne contas e políticas administradas centralme
 
 UCS é uma plataforma de servidores com diretório, console de administração e integração de identidade. Para serviços compatíveis com Active Directory, utiliza componentes como Samba. **LDAP** organiza dados de diretório; **Kerberos** participa da autenticação; **DNS** permite localizar servidores e serviços. Falhas em DNS e horário frequentemente impedem entrada no domínio.
 
-O índice original usa “UCS DC”. Aqui, o primeiro servidor de um domínio UCS é apresentado com a terminologia **Primary Directory Node**. A referência deste capítulo é a linha UCS 5.2, conforme o [guia oficial de início rápido](https://docs.software-univention.de/quickstart/5.2/en/index.html). Use a atualização de manutenção suportada no momento da instalação.
+O primeiro servidor de um domínio UCS recebe o papel de **Primary Directory Node**. Neste capítulo, vamos usar o UCS 5.2, seguindo o [guia oficial de início rápido](https://docs.software-univention.de/quickstart/5.2/en/index.html). Use a atualização de manutenção suportada no momento da instalação.
 
 ## Planejar uma VM separada
 

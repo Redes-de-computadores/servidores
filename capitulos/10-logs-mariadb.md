@@ -8,7 +8,7 @@ Um **log** registra eventos. O journal do systemd permite consultá-los por serv
 
 São três componentes distintos. Nem todo evento do journal será encaminhado automaticamente ao rsyslog em qualquer instalação. Vamos provar o caminho de uma mensagem de teste local até uma tabela, sem expor o banco à rede.
 
-Pré-requisitos: sudo, espaço em disco e acesso aos repositórios. Este capítulo interpreta o título “Registro de Logs — MariaDB” do índice original; o procedimento completo não estava disponível no HTML.
+Pré-requisitos: sudo, espaço em disco e acesso aos repositórios.
 
 ## Começar pelo journal
 

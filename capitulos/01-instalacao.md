@@ -4,7 +4,7 @@
 
 ## Objetivo e pré-requisitos
 
-Instalar o sistema que será administrado nos próximos capítulos. Prepare a VM e leia o [planejamento de rede](00-laboratorio.md). O material antigo menciona Debian 10; novas instalações deste guia usam **Debian 13**. Debian 10 encerrou o LTS público em 2024; suporte estendido de terceiros é uma modalidade distinta. Fonte: [versões Debian](https://www.debian.org/releases/).
+Instalar o sistema que será administrado nos próximos capítulos. Prepare a VM e leia o [planejamento de rede](00-laboratorio.md). Vamos usar o **Debian 13 (Trixie)**. Ao baixar a imagem, confira a versão e a arquitetura para acompanhar os exemplos com a mesma base.
 
 ## Obter e verificar a imagem
 
