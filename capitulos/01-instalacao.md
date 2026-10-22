@@ -1,6 +1,9 @@
 # 01 · Instalação do Debian
 
-[← Laboratório](00-laboratorio.md) · [README](../README.md) · [Pacotes →](02-pacotes.md)
+[← Guia Completo com Imagens (Item 00)](00-instalacao.md) · [README](../README.md) · [Pacotes →](02-pacotes.md)
+
+> [!TIP]
+> Para o guia visual completo de instalação passo a passo do Debian 13 com capturas de tela e explicações de cada tela do instalador, consulte o **[Item 00 · Instalação do Debian 13 no Laboratório](00-instalacao.md)**.
 
 ## Objetivo e pré-requisitos
 

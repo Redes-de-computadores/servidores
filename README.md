@@ -15,7 +15,7 @@ Você pode começar mesmo que nunca tenha administrado um sistema Linux. Neste g
 
 | Ordem | Capítulo | Ao concluir, você conseguirá… |
 | :---: | --- | --- |
-| 00 | [Laboratório e fundamentos](capitulos/00-laboratorio.md) | Entender terminal, caminhos, privilégios e a topologia |
+| 00 | [Instalação do Debian 13 e Laboratório](capitulos/00-instalacao.md) | Instalar o Debian 13 (Trixie) passo a passo com imagens oficiais e preparar a VM |
 | 01 | [Instalação do Debian e interface gráfica](capitulos/01-instalacao.md) | Instalar uma VM e preparar o primeiro acesso |
 | 02 | [Gerenciamento de pacotes](capitulos/02-pacotes.md) | Instalar, atualizar e investigar programas |
 | 03 | [Configurações de rede](capitulos/03-rede.md) | Configurar IP, gateway e resolução de nomes |

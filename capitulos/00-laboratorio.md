@@ -1,6 +1,9 @@
 # 00 · Laboratório e fundamentos
 
-[← README](../README.md) · [Próximo: instalação →](01-instalacao.md)
+[← README](../README.md) · [Guia Ilustrado de Instalação do Debian 13 →](00-instalacao.md) · [Próximo: instalação →](01-instalacao.md)
+
+> [!NOTE]
+> O guia oficial passo a passo com capturas de tela e ilustrações para a instalação do Debian 13 (Trixie) no laboratório está detalhado em **[00 · Instalação do Debian 13 no Laboratório](00-instalacao.md)**.
 
 ## Objetivo
 
