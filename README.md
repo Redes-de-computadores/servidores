@@ -20,8 +20,8 @@ Você pode começar mesmo que nunca tenha administrado um sistema Linux. Neste g
 | 02 | [Gerenciamento de pacotes](capitulos/02-pacotes.md) | Instalar, atualizar e investigar programas |
 | 03 | [Acesso remoto com SSH](capitulos/03-ssh.md) | Acessar o servidor com autenticação por par de chaves e transferir arquivos |
 | 04 | [Usuários, grupos e permissões](capitulos/04-usuarios.md) | Administrar contas, grupos e compartilhar diretórios departamentais |
-| 05 | [Firewall com nftables e pfSense](capitulos/06-firewall.md) | Filtrar tráfego e proteger o acesso administrativo |
-| 06 | [DHCP com Kea](capitulos/07-dhcp.md) | Distribuir configurações de rede aos clientes |
+| 05 | [Firewall com pfSense, nftables e iptables](capitulos/05-firewall.md) | Instalar e configurar o pfSense, NAT e filtragem de pacotes no Debian 13 |
+| 06 | [Servidor DHCP (ISC DHCP e Kea)](capitulos/06-dhcp.md) | Distribuir configurações de rede e reservas por MAC aos clientes |
 | 07 | [Backup e agendamento](capitulos/08-backup.md) | Criar, agendar e restaurar uma cópia de arquivos |
 | 08 | [Transferência de arquivos: SFTP e FTP](capitulos/09-arquivos.md) | Transferir arquivos e distinguir os protocolos |
 | 09 | [Logs e MariaDB](capitulos/10-logs-mariadb.md) | Investigar eventos e registrar mensagens em banco |

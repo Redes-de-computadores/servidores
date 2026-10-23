@@ -1,6 +1,6 @@
 # 08 · Backup e agendamento
 
-[← DHCP](07-dhcp.md) · [README](../README.md) · [Arquivos →](09-arquivos.md)
+[← 06 · DHCP](06-dhcp.md) · [README](../README.md) · [Arquivos →](09-arquivos.md)
 
 ## Conceitos e objetivo
 
