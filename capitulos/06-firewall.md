@@ -51,6 +51,7 @@ O **pfSense** é uma distribuição livre baseada em **FreeBSD** voltada para at
 - **Link oficial para download da ISO:** https://www.pfsense.org/download/ (selecione a arquitetura `AMD64 (64-bit)` e o instalador `DVD Image (ISO) Installer`).
 
 ### Requisitos da Máquina Virtual do pfSense no Hipervisor
+
 - **Memória RAM:** 1024 MB a 2048 MB.
 - **Disco Rígido Virtual:** 16 GB.
 - **Placa de Rede 1 (Adaptador 1 — WAN):** Modo *NAT* ou *Bridge* (receberá acesso externo/Internet).
@@ -59,6 +60,7 @@ O **pfSense** é uma distribuição livre baseada em **FreeBSD** voltada para at
 ---
 
 ### Passo 1 — Aviso de Direitos Autorais e Boas-Vindas
+
 1. Ao iniciar a máquina virtual pela imagem ISO do pfSense, aguarde o carregamento do sistema e na tela **Copyright and distribution notice**, pressione `Enter` em **`< Accept >`**.
 
 ![Tela de Copyright e distribuição do pfSense](imagens/06-firewall/01-pfsense-copyright.png)
@@ -70,6 +72,7 @@ O **pfSense** é uma distribuição livre baseada em **FreeBSD** voltada para at
 ---
 
 ### Passo 2 — Seleção do Mapa de Teclado (Keymap)
+
 1. Em **Keymap Selection**, utilize as setas para localizar o layout do seu teclado (por exemplo, **`Brazilian (accent keys)`** para ABNT2) e pressione `Enter` para marcar.
 
 ![Seleção do layout de teclado no pfSense](imagens/06-firewall/03-pfsense-keymap-select.png)
@@ -81,6 +84,7 @@ O **pfSense** é uma distribuição livre baseada em **FreeBSD** voltada para at
 ---
 
 ### Passo 3 — Particionamento do Disco com ZFS
+
 1. Em **Partitioning**, selecione o sistema de arquivos moderno e resiliente **`Auto (ZFS)`** (*Guided Root-on-ZFS*) e pressione `Enter`.
 
 ![Escolha do particionamento Auto ZFS no pfSense](imagens/06-firewall/05-pfsense-partitioning-zfs.png)
@@ -104,6 +108,7 @@ O **pfSense** é uma distribuição livre baseada em **FreeBSD** voltada para at
 ---
 
 ### Passo 4 — Extração dos Pacotes e Finalização da Instalação
+
 1. Aguarde a barra de progresso de cópia e instalação dos pacotes do sistema no disco.
 
 ![Progresso de instalação dos arquivos do pfSense](imagens/06-firewall/10-pfsense-fetching-progress.png)
@@ -115,6 +120,7 @@ O **pfSense** é uma distribuição livre baseada em **FreeBSD** voltada para at
 ---
 
 ### Passo 5 — Configuração do IP da Interface LAN pelo Console
+
 Após o reinício, o pfSense exibirá no terminal o **Menu de Console** listando as interfaces **`WAN (em0)`** e **`LAN (em1)`** e as opções numeradas de `0` a `16`:
 
 ![Menu principal do console de texto do pfSense](imagens/06-firewall/12-pfsense-console-menu.png)

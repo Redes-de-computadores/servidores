@@ -176,6 +176,7 @@ flowchart TD
   ```
 
 #### Caracteres especiais de navegação:
+
 - `.` (ponto simples): Representa o **diretório atual**.
 - `..` (ponto duplo): Representa o **diretório pai** (um nível acima na árvore).
 - `~` (til): Representa a **pasta pessoal** do usuário atual (`$HOME`).
@@ -475,6 +476,7 @@ A lógica do Vim é estruturada como uma linguagem própria composta por **Verbo
 A busca e substituição em arquivos de configuração de servidores é feita com alta velocidade:
 
 #### 1. Pesquisa direta e reversa
+
 - Pressione **`/`** no Modo Normal, digite a palavra desejada e tecle `Enter` (ex: `/nameserver`).
 - Pressione **`n`** para saltar para a **próxima ocorrência** da palavra em direção ao final do arquivo.
 - Pressione **`N`** (maiúsculo) para retornar à **ocorrência anterior** em direção ao topo.
@@ -482,6 +484,7 @@ A busca e substituição em arquivos de configuração de servidores é feita co
 - Para desativar o destaque amarelo das palavras encontradas na tela: digite **`:noh`** (*no highlight*) e tecle `Enter`.
 
 #### 2. Substituição global em todo o arquivo
+
 A sintaxe do comando de substituição no Modo Ex segue a fórmula:
 ```text
 :%s/padrao_antigo/padrao_novo/g
@@ -509,6 +512,7 @@ A sintaxe do comando de substituição no Modo Ex segue a fórmula:
 Uma das operações mais frequentes em servidores é **comentar ou descomentar um bloco inteiro de linhas** de um arquivo de configuração (como desativar uma regra de firewall ou um repositório).
 
 #### Como comentar 10 linhas simultaneamente com `Ctrl + V`:
+
 1. Posicione o cursor no primeiro caractere da primeira linha que deseja comentar.
 2. Pressione **`Ctrl + V`** (o rodapé exibirá `-- VISUAL BLOCK --`).
 3. Pressione a tecla **`j`** várias vezes (ou digite `9j`) para estender a seleção vertical pelas 10 linhas.
@@ -518,6 +522,7 @@ Uma das operações mais frequentes em servidores é **comentar ou descomentar u
 7. O Vim aplicará automaticamente o `# ` em **todas** as linhas selecionadas simultaneamente!
 
 #### Como descomentar o bloco de linhas:
+
 1. Posicione o cursor sobre o primeiro caractere `#` da primeira linha.
 2. Pressione **`Ctrl + V`**.
 3. Pressione `j` até selecionar a coluna de caracteres `#` de todas as linhas.
@@ -599,6 +604,7 @@ Execute os exercícios abaixo no terminal da sua máquina virtual `srv01` para s
 ---
 
 ### Missão 1: Criação e Sobrevivência Básica
+
 1. Crie um diretório de treino com `mkdir -p /tmp/treino-vim && cd /tmp/treino-vim`.
 2. Abra um novo arquivo com `vim inventario.txt`.
 3. Pressione a tecla `i` e digite um breve relatório do servidor:
@@ -615,6 +621,7 @@ Execute os exercícios abaixo no terminal da sua máquina virtual `srv01` para s
 ---
 
 ### Missão 2: Cirurgia de Texto e Duplicação sem Mouse
+
 1. Copie o arquivo de serviços de rede do sistema para o laboratório de testes:
    ```bash
    cp /etc/services /tmp/treino-vim/servicos.txt
@@ -631,6 +638,7 @@ Execute os exercícios abaixo no terminal da sua máquina virtual `srv01` para s
 ---
 
 ### Missão 3: Substituição em Massa de Sub-redes de Laboratório
+
 1. Crie um arquivo com uma tabela simulada de endereços IP de uma empresa que será migrada:
    ```bash
    cat << 'EOF' > /tmp/treino-vim/ips.txt
@@ -652,6 +660,7 @@ Execute os exercícios abaixo no terminal da sua máquina virtual `srv01` para s
 ---
 
 ### Missão 4: Comentando Diretivas com Modo Visual de Bloco
+
 1. Crie uma lista simulada de portas de firewall:
    ```bash
    cat << 'EOF' > /tmp/treino-vim/firewall.txt
@@ -672,6 +681,7 @@ Execute os exercícios abaixo no terminal da sua máquina virtual `srv01` para s
 ---
 
 ### Missão 5: O Tutorial Oficial Integrado (`vimtutor`)
+
 O projeto Vim inclui um programa oficial de treinamento prático de 30 minutos em português que roda interativamente dentro do próprio editor:
 
 ```bash

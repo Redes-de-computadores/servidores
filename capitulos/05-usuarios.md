@@ -124,6 +124,7 @@ bob:$y$j9T$AbCdEf...:20018:2:30:7:5:20380:
 Antes de criar ou alterar contas, o administrador deve saber consultar a base de identidades local ou integrada à rede (NSS — *Name Service Switch*).
 
 ### Passo 1 — Consultar bases de usuários e grupos com `getent`
+
 Autenticado com o usuário administrativo (`suporte` ou `aluno`), inspecione as bases `passwd` e `group`:
 
 ```bash

@@ -65,11 +65,13 @@ O Debian disponibiliza diferentes tipos de imagens de instalação. Para este la
 Arquivos de imagem ISO podem sofrer corrupção de dados durante o download. A verificação criptográfica do hash compara a assinatura matemática do arquivo local com o valor publicado pelo projeto Debian.
 
 #### No Windows (PowerShell):
+
 ```powershell
 Get-FileHash -Algorithm SHA256 -LiteralPath "$HOME\Downloads\debian-13-netinst.iso"
 ```
 
 #### No Linux / macOS (Terminal):
+
 ```bash
 sha256sum debian-13-netinst.iso
 ```
@@ -77,6 +79,7 @@ sha256sum debian-13-netinst.iso
 Compare a sequência de caracteres gerada com a linha correspondente no arquivo `SHA256SUMS` oficial. Se forem idênticas, o arquivo está íntegro e autêntico.
 
 ### Preparação do dispositivo de boot
+
 - **Em Máquina Virtual:** Conecte diretamente o arquivo `.iso` à controladora de CD/DVD virtual da VM nas configurações de armazenamento do hipervisor.
 - **Em Computador Físico:** Grave a ISO em um pendrive utilizando ferramentas como Ventoy, Rufus (em modo DD) ou através do utilitário `dd` no Linux (`sudo dd if=debian-13.iso of=/dev/sdX bs=4M status=progress`).
 
@@ -196,16 +199,19 @@ O Debian adota uma abordagem de segurança padronizada em relação à conta de 
 Crie uma conta para o uso rotineiro do sistema pelo estudante.
 
 #### A. Nome completo do usuário
+
 ![Nome Completo do Usuário](imagens/00-instalacao/09-nome-completo-usuario.png)
 - Digite o nome completo de identificação, por exemplo: `Aluno da Silva` ou `Aluno`.
 - Clique em **Continuar**.
 
 #### B. Nome de usuário para a conta
+
 ![Nome de Usuário](imagens/00-instalacao/10-conta-usuario.png)
 - Digite o identificador de login (somente letras minúsculas, sem acentos ou espaços): `aluno`
 - Clique em **Continuar**.
 
 #### C. Senha do usuário
+
 ![Senha do Usuário](imagens/00-instalacao/11-senha-usuario.png)
 - Defina uma senha para o usuário `aluno` (por exemplo, em ambiente de laboratório isolado de estudo, utilize uma senha memorizável como `aluno123` ou uma senha forte de sua escolha).
 - Confirme a mesma senha no campo inferior.
@@ -218,21 +224,25 @@ Crie uma conta para o uso rotineiro do sistema pelo estudante.
 O particionamento define a organização das unidades lógicas e formatação dos sistemas de arquivos.
 
 #### A. Método de particionamento
+
 ![Método de Particionamento](imagens/00-instalacao/12-metodo-particionamento.png)
 1. Selecione a opção **Assistido - usar o disco inteiro** (*Guided - use entire disk*).
 2. Clique em **Continuar**.
 
 #### B. Seleção do disco de destino
+
 - O instalador exibirá o disco virtual criado no hipervisor (ex: `SCSI1 (0,0,0) (sda) - 25.0 GB ATA VBOX HARDDISK` ou disco virtual QEMU/VMware).
 - Confirme a seleção do disco e clique em **Continuar**.
 
 #### C. Esquema de particionamento
+
 ![Esquema de Particionamento](imagens/00-instalacao/13-esquema-particionamento.png)
 1. Selecione a opção **Todos os arquivos em uma partição (para iniciantes)**.
 2. Clique em **Continuar**.
 3. O assistente criará automaticamente a estrutura padrão com a partição raiz (`/`) formatada em `ext4` e a partição de troca (`swap`).
 
 #### D. Confirmação e gravação das alterações
+
 ![Confirmação do Particionamento](imagens/00-instalacao/14-confirmar-particionamento.png)
 1. Revise a tabela de alterações proposta.
 2. Na pergunta *"Escrever as mudanças nos discos?"* (*Write the changes to disks?*), marque obrigatoriamente a opção **Sim** (*Yes*).
@@ -245,18 +255,22 @@ O particionamento define a organização das unidades lógicas e formatação do
 O APT (*Advanced Package Tool*) gerencia o download e atualização de programas a partir de servidores espelhos confiáveis na internet.
 
 #### A. Mídia adicional de instalação
+
 - Quando o instalador perguntar *"Ler outra mídia de instalação?"*, selecione **Não** e clique em **Continuar**.
 
 #### B. País do espelho de pacotes
+
 ![País do Espelho APT](imagens/00-instalacao/16-espelho-apt-pais.png)
 - Selecione **Brasil** e clique em **Continuar**.
 
 #### C. Servidor do espelho do repositório
+
 ![Servidor de Espelho Oficial](imagens/00-instalacao/17-espelho-apt-servidor.png)
 - Selecione o espelho oficial unificado: **deb.debian.org** (rede CDN distribuída global do projeto Debian).
 - Clique em **Continuar**.
 
 #### D. Informação de proxy HTTP
+
 - Se você não utiliza proxy corporativo na rede, **deixe o campo em branco**.
 - Clique em **Continuar**.
 
@@ -336,10 +350,12 @@ srv01 login:
 ```
 
 ### 1. Autenticação inicial
+
 1. Digite o usuário: `aluno` e tecle `Enter`.
 2. Digite a senha cadastrada durante a instalação (lembre-se: no Linux os caracteres da senha não são exibidos na tela por segurança). Tecle `Enter`.
 
 ### 2. Validação da versão e integridade do sistema
+
 Execute os seguintes comandos no terminal do `srv01` para checar as informações da instalação:
 
 ```bash
@@ -371,6 +387,7 @@ BUG_REPORT_URL="https://bugs.debian.org/"
 ```
 
 ### 3. Caso o `sudo` não esteja disponível para o usuário
+
 Se você definiu uma senha para o usuário `root` no Passo 8, execute o procedimento abaixo para habilitar o comando `sudo` para a conta `aluno`:
 
 ```bash

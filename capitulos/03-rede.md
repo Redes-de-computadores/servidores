@@ -30,6 +30,7 @@ Quando um serviço é instalado, ele traz uma configuração padrão básica e s
 > **Nunca** altere um arquivo de configuração sem antes criar uma cópia de segurança (*backup*) do original. Em caso de falha ou comportamento inesperado, você poderá restabelecer a operação original em segundos.
 
 ### Cópia de segurança preventiva
+
 Antes de qualquer modificação no arquivo `/etc/network/interfaces`, gere uma cópia com a extensão `.ori` ou `.bkp`:
 
 ```bash
@@ -38,6 +39,7 @@ sudo cp /etc/network/interfaces /etc/network/interfaces.ori
 ```
 
 ### Edição e auditoria com o comando `diff`
+
 Após realizar alterações no arquivo com seu editor preferido (`sudo nano /etc/network/interfaces` ou `sudo vim /etc/network/interfaces`), utilize o comando `diff` para auditar exatamente o que foi adicionado, modificado ou removido:
 
 ```bash
@@ -68,6 +70,7 @@ diff -u /etc/network/interfaces.ori /etc/network/interfaces
 ## 2. Diagrama da Rede e Identificação de Interfaces
 
 ### Topologia do ambiente
+
 Em um ambiente corporativo ou doméstico de pequeno porte, o servidor Linux localiza-se dentro de uma rede interna privada (*Intranet*), conectado a um roteador/modem com firewall integrado que fornece a conexão externa para a *Internet*.
 
 ![Diagrama da Rede](imagens/03-rede/01-diagrama-rede.png)
@@ -362,6 +365,7 @@ flowchart TD
 ```
 
 ### 1. Definindo o Hostname com `hostnamectl`
+
 O arquivo `/etc/hostname` deve conter **apenas** o nome simples do computador, sem extensões de domínio.
 
 No Debian 13 com `systemd`, o método padrão e seguro para alterar o nome da máquina é o comando `hostnamectl`:
@@ -380,6 +384,7 @@ cat /etc/hostname
 ---
 
 ### 2. Mapeamento Local no `/etc/hosts`
+
 O arquivo `/etc/hosts` funciona como um banco de dados estático e prioritário de resolução de nomes local. Ele garante que os serviços do próprio servidor consigam resolver seu FQDN e seu IP fixo mesmo que a rede ou os servidores DNS externos estejam inacessíveis.
 
 Edite o `/etc/hosts`:
@@ -453,11 +458,13 @@ hosts:          files dns
 *(ou em instalações com `systemd` estendido: `hosts: files mdns4_minimal [NOTFOUND=return] dns myhostname`)*
 
 ### Entendendo a ordem das palavras-chave
+
 1. `files`: O sistema consulta primeiramente o arquivo local `/etc/hosts`.
 2. `dns`: Caso o nome não seja encontrado localmente em `files`, o sistema encaminha a consulta para os servidores especificados em `/etc/resolv.conf`.
 3. `myhostname`: Módulo do `systemd` que resolve automaticamente o hostname local caso ele não esteja no `/etc/hosts`.
 
 ### Laboratório Prático: Experimentando a Ordem de Resolução
+
 Para demonstrar como o `nsswitch.conf` controla a resolução, crie uma entrada de teste fictícia no `/etc/hosts`:
 
 ```bash

@@ -48,6 +48,7 @@ flowchart LR
 ```
 
 ### Versatilidade do protocolo SSH
+
 O protocolo SSH oferece múltiplos serviços além do terminal interativo:
 1. **Emulação de Terminal Remoto (`ssh`):** Acesso à linha de comando com controle total de pseudoterminal (*TTY*).
 2. **Transferência Segura de Arquivos (`sftp` e `scp`):** Cópia criptografada de dados utilizando os mesmos privilégios de acesso e chaves do usuário.
@@ -74,6 +75,7 @@ Os clientes SSH dividem-se em dois grandes grupos:
 No Debian 13, o serviço do servidor SSH é provido pelo pacote oficial **`openssh-server`**. Caso você já tenha marcado o item "Servidor SSH" durante o *tasksel* na instalação do [Capítulo 00](00-instalacao.md), o serviço já estará presente.
 
 ### Instalação dos pacotes
+
 Execute no console do `srv01`:
 
 ```bash
@@ -110,6 +112,7 @@ sudo systemctl status ssh --no-pager
 ```
 
 ### Confirmando a porta em escuta com `ss`
+
 No Debian 13, conferimos as portas em escuta utilizando a suíte `iproute2`:
 
 ```bash
@@ -434,6 +437,7 @@ sudo systemctl reload ssh
 ```
 
 ### Comprovando o Bloqueio de Senhas
+
 Abra uma **nova janela de terminal** no cliente e tente forçar intencionalmente uma autenticação por senha:
 
 ```bash
