@@ -1,6 +1,6 @@
-# 08 · Backup e agendamento
+# 09 · Backup e agendamento
 
-[← 07 · DHCP](07-dhcp.md) · [README](../README.md) · [Arquivos →](09-arquivos.md)
+[← 08 · DHCP](08-dhcp.md) · [README](../README.md) · [Próximo: Logs e MariaDB →](10-logs-mariadb.md)
 
 ## Conceitos e objetivo
 
@@ -109,3 +109,7 @@ Sem diferenças de conteúdo, `diff` não imprime nada e retorna zero. Compare t
 > O exemplo acumula arquivos. Monitore `df -h /var/backups` e defina retenção antes de deixá-lo ativo por muito tempo. Retenção exige decidir quais datas preservar e verificar uma cópia externa antes de excluir versões antigas.
 
 **Exercício:** crie um arquivo, faça o backup, altere o original e recupere a versão antiga em outro diretório. Registre quanto tempo a recuperação levou e onde ficaria a cópia que sobreviveria à perda da VM.
+
+---
+
+[← Voltar para 08 · DHCP](08-dhcp.md) · [README](../README.md) · [Avançar para 10 · Logs e MariaDB →](10-logs-mariadb.md)

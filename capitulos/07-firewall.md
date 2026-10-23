@@ -1,6 +1,6 @@
-# 06 · Firewall de Borda (pfSense) e Firewall Linux (nftables e iptables) no Debian 13
+# 07 · Firewall de Borda (pfSense) e Firewall Linux (nftables e iptables) no Debian 13
 
-[← 05 · Usuários](05-usuarios.md) · [README](../README.md) · [Próximo: DHCP →](07-dhcp.md)
+[← 06 · Servidor FTP](06-ftp.md) · [README](../README.md) · [Próximo: DHCP →](08-dhcp.md)
 
 ## Objetivo e Competências
 
@@ -63,11 +63,11 @@ O **pfSense** é uma distribuição livre baseada em **FreeBSD** voltada para at
 
 1. Ao iniciar a máquina virtual pela imagem ISO do pfSense, aguarde o carregamento do sistema e na tela **Copyright and distribution notice**, pressione `Enter` em **`< Accept >`**.
 
-![Tela de Copyright e distribuição do pfSense](imagens/06-firewall/01-pfsense-copyright.png)
+![Tela de Copyright e distribuição do pfSense](imagens/07-firewall/01-pfsense-copyright.png)
 
 2. Na tela **Welcome to pfSense!**, mantenha a opção **`Install` (`Install pfSense`)** selecionada e pressione `Enter` em **`< OK >`**.
 
-![Tela de boas-vindas do instalador do pfSense](imagens/06-firewall/02-pfsense-welcome-install.png)
+![Tela de boas-vindas do instalador do pfSense](imagens/07-firewall/02-pfsense-welcome-install.png)
 
 ---
 
@@ -75,11 +75,11 @@ O **pfSense** é uma distribuição livre baseada em **FreeBSD** voltada para at
 
 1. Em **Keymap Selection**, utilize as setas para localizar o layout do seu teclado (por exemplo, **`Brazilian (accent keys)`** para ABNT2) e pressione `Enter` para marcar.
 
-![Seleção do layout de teclado no pfSense](imagens/06-firewall/03-pfsense-keymap-select.png)
+![Seleção do layout de teclado no pfSense](imagens/07-firewall/03-pfsense-keymap-select.png)
 
 2. Após selecionar o idioma do teclado, volte ao topo da lista em **`>>> Continue with ... keymap`** e pressione `Enter`.
 
-![Confirmando e continuando com o mapa de teclado selecionado](imagens/06-firewall/04-pfsense-keymap-continue.png)
+![Confirmando e continuando com o mapa de teclado selecionado](imagens/07-firewall/04-pfsense-keymap-continue.png)
 
 ---
 
@@ -87,23 +87,23 @@ O **pfSense** é uma distribuição livre baseada em **FreeBSD** voltada para at
 
 1. Em **Partitioning**, selecione o sistema de arquivos moderno e resiliente **`Auto (ZFS)`** (*Guided Root-on-ZFS*) e pressione `Enter`.
 
-![Escolha do particionamento Auto ZFS no pfSense](imagens/06-firewall/05-pfsense-partitioning-zfs.png)
+![Escolha do particionamento Auto ZFS no pfSense](imagens/07-firewall/05-pfsense-partitioning-zfs.png)
 
 2. Na tela **ZFS Configuration**, mantenha a primeira opção **`>>> Install` (`Proceed with Installation`)** selecionada e pressione `Enter`.
 
-![Prosseguindo com a configuração padrão do pool ZFS](imagens/06-firewall/06-pfsense-zfs-install.png)
+![Prosseguindo com a configuração padrão do pool ZFS](imagens/07-firewall/06-pfsense-zfs-install.png)
 
 3. Em **Virtual Device Type**, como nossa máquina virtual possui apenas um disco virtual, selecione **`stripe` (`Stripe - No Redundancy`)** e pressione `Enter`.
 
-![Seleção do modo Stripe sem redundância para disco único](imagens/06-firewall/07-pfsense-zfs-stripe.png)
+![Seleção do modo Stripe sem redundância para disco único](imagens/07-firewall/07-pfsense-zfs-stripe.png)
 
 4. Na seleção de disco físico, marque o disco **`ada0`** (`VBOX HARDDISK`) pressionando a **Barra de Espaço (`[*]`)** e depois pressione `Enter` para confirmar.
 
-![Marcação do disco virtual ada0 para instalação do ZFS](imagens/06-firewall/08-pfsense-zfs-disk-ada0.png)
+![Marcação do disco virtual ada0 para instalação do ZFS](imagens/07-firewall/08-pfsense-zfs-disk-ada0.png)
 
 5. Na janela de confirmação **Last Chance!**, selecione **`< YES >`** com as setas para autorizar a formatação de `ada0` e pressione `Enter`.
 
-![Confirmação final de formatação do disco ada0](imagens/06-firewall/09-pfsense-zfs-confirm-destroy.png)
+![Confirmação final de formatação do disco ada0](imagens/07-firewall/09-pfsense-zfs-confirm-destroy.png)
 
 ---
 
@@ -111,11 +111,11 @@ O **pfSense** é uma distribuição livre baseada em **FreeBSD** voltada para at
 
 1. Aguarde a barra de progresso de cópia e instalação dos pacotes do sistema no disco.
 
-![Progresso de instalação dos arquivos do pfSense](imagens/06-firewall/10-pfsense-fetching-progress.png)
+![Progresso de instalação dos arquivos do pfSense](imagens/07-firewall/10-pfsense-fetching-progress.png)
 
 2. Ao concluir, na pergunta **Manual Configuration** (*Would you like to open a shell in the new system to make any final manual modifications?*), selecione **`< No >`** e pressione `Enter`. Em seguida, remova a mídia ISO do drive virtual e selecione **`< Reboot >`**.
 
-![Finalização da instalação escolhendo No na configuração manual](imagens/06-firewall/11-pfsense-manual-config-no.png)
+![Finalização da instalação escolhendo No na configuração manual](imagens/07-firewall/11-pfsense-manual-config-no.png)
 
 ---
 
@@ -123,7 +123,7 @@ O **pfSense** é uma distribuição livre baseada em **FreeBSD** voltada para at
 
 Após o reinício, o pfSense exibirá no terminal o **Menu de Console** listando as interfaces **`WAN (em0)`** e **`LAN (em1)`** e as opções numeradas de `0` a `16`:
 
-![Menu principal do console de texto do pfSense](imagens/06-firewall/12-pfsense-console-menu.png)
+![Menu principal do console de texto do pfSense](imagens/07-firewall/12-pfsense-console-menu.png)
 
 Caso precise alterar o endereço IP da interface interna (**LAN**) para o padrão da sua rede de laboratório:
 1. Digite a opção **`2` (`Set interface(s) IP address`)** e pressione `Enter`.
@@ -134,7 +134,7 @@ Caso precise alterar o endereço IP da interface interna (**LAN**) para o padrã
 6. Para IPv6, deixe em branco e pressione `Enter`.
 7. Escolha se deseja habilitar o servidor DHCP na LAN (`y` ou `n`) e se deseja reverter o WebConfigurator para HTTP (`n` para manter HTTPS seguro).
 
-![Configuração de endereço IP e máscara /24 da interface LAN no console do pfSense](imagens/06-firewall/13-pfsense-console-ip-cidr.png)
+![Configuração de endereço IP e máscara /24 da interface LAN no console do pfSense](imagens/07-firewall/13-pfsense-console-ip-cidr.png)
 
 ---
 
@@ -152,23 +152,23 @@ No menu superior, acesse **`System` > `General Setup`** e siga os **10 pontos es
 2. **02 — Domain:** Caso possua um domínio interno para a empresa/laboratório, configure-o neste campo (ex.: `localdomain`, `senac.corp` ou `lab.local`).
 3. **03 — DNS Server Settings:** Defina os servidores DNS de propósito geral (ex.: `8.8.8.8` e `1.1.1.1` ou o IP do seu servidor DNS interno).
 
-![Configuração dos campos 01 Hostname, 02 Domain e 03 DNS Server Settings no General Setup](imagens/06-firewall/14-pfsense-general-hostname-dns.png)
+![Configuração dos campos 01 Hostname, 02 Domain e 03 DNS Server Settings no General Setup](imagens/07-firewall/14-pfsense-general-hostname-dns.png)
 
 4. **04 — Timezone:** Defina o fuso horário para refletir a localidade correta (ex.: `America/Sao_Paulo`) para que os registros de logs e regras agendadas tenham carimbo de tempo exato.
 5. **05 — Timeservers:** Mantenha ou defina o servidor NTP para sincronizar a hora automaticamente (ex.: `0.pfsense.pool.ntp.org` ou `a.st1.ntp.br`).
 6. **06 — Language:** Defina o idioma da interface (preferencialmente **English**, facilitando a correlação com a documentação técnica oficial e fóruns de segurança).
 
-![Configuração dos campos 04 Timezone, 05 Timeservers e 06 Language](imagens/06-firewall/15-pfsense-general-localization.png)
+![Configuração dos campos 04 Timezone, 05 Timeservers e 06 Language](imagens/07-firewall/15-pfsense-general-localization.png)
 
 7. **07 — Theme:** Defina o tema visual do painel (`pfSense` claro, `pfSense-dark`, etc.).
 8. **08 — Top Navigation:** Selecione `Fixed (Remains visible at top of page)` para fixar a barra de menu no topo da tela enquanto utiliza a rolagem (*scroll*).
 9. **09 — Dashboard Columns:** Defina quantas colunas de widgets serão exibidas no painel inicial (ex.: `2`).
 
-![Configuração dos campos 07 Theme, 08 Top Navigation e 09 Dashboard Columns](imagens/06-firewall/16-pfsense-general-webconfigurator.png)
+![Configuração dos campos 07 Theme, 08 Top Navigation e 09 Dashboard Columns](imagens/07-firewall/16-pfsense-general-webconfigurator.png)
 
 10. **10 — Save:** Clique no botão **`Save`** no final da página para gravar e aplicar as configurações!
 
-![Passo 10 - Salvando as configurações no botão Save](imagens/06-firewall/17-pfsense-general-save.png)
+![Passo 10 - Salvando as configurações no botão Save](imagens/07-firewall/17-pfsense-general-save.png)
 
 ---
 
@@ -182,31 +182,31 @@ Acesse **`System` > `Advanced`** para endurecer o controle de acesso administrat
    - Mantenha o protocolo em **`HTTPS (SSL/TLS)`** para que a senha de administração nunca trafegue em texto claro pela rede.
    - Opcionalmente, você pode definir uma porta TCP customizada em **TCP port** (por padrão usa `443`) e limitar o número máximo de processos do servidor web (**Max Processes**).
 
-![Configuração do protocolo HTTPS e certificado no Admin Access](imagens/06-firewall/18-pfsense-advanced-https.png)
+![Configuração do protocolo HTTPS e certificado no Admin Access](imagens/07-firewall/18-pfsense-advanced-https.png)
 
 2. **Proteções do Navegador (`Anti-lockout`, `DNS Rebind Check`, `HTTP_REFERER`):**
    - **Anti-lockout:** Mantém uma regra automática na LAN que impede o administrador de se bloquear acidentalmente fora do painel web e do SSH.
    - **DNS Rebind Check** e **HTTP_REFERER enforcement:** Mantêm ativa a proteção contra ataques de falsificação de requisição cruzada (*CSRF*) e *DNS Rebinding* (deixe desmarcadas as caixas *Disable* para preservar a proteção ativa).
 
-![Proteções Anti-lockout, DNS Rebind e HTTP_REFERER no pfSense](imagens/06-firewall/19-pfsense-advanced-rebind-referer.png)
+![Proteções Anti-lockout, DNS Rebind e HTTP_REFERER no pfSense](imagens/07-firewall/19-pfsense-advanced-rebind-referer.png)
 
 3. **Acesso Remoto via SSH (`Secure Shell`):**
    - Marque **`Enable Secure Shell`** caso deseje administrar o pfSense remotamente via terminal SSH.
    - Em **SSHd Key Only**, você pode exigir autenticação por chave pública (`Public Key Only` ou `Both`), e em **SSH port** alterar a porta padrão `22` se necessário.
 
-![Habilitação e configuração do servidor Secure Shell SSH no pfSense](imagens/06-firewall/20-pfsense-advanced-ssh.png)
+![Habilitação e configuração do servidor Secure Shell SSH no pfSense](imagens/07-firewall/20-pfsense-advanced-ssh.png)
 
 4. **Proteção contra Força Bruta (`Login Protection`):**
    - O recurso **Login Protection** monitora tentativas fracassadas de login tanto na interface WebGUI quanto no SSH e bloqueia automaticamente o IP atacante após atingir o limite configurado (**Threshold**, padrão `30`), pelo tempo definido em **Blocktime** (`120` segundos).
    - Em **Pass list**, você pode adicionar a sub-rede administrativa confiável para nunca ser bloqueada por engano.
 
-![Configuração do Login Protection contra ataques de força bruta](imagens/06-firewall/21-pfsense-advanced-login-protection.png)
+![Configuração do Login Protection contra ataques de força bruta](imagens/07-firewall/21-pfsense-advanced-login-protection.png)
 
 5. **Proteção por Senha do Menu de Console (`Console Options`):**
    - **Importante:** Por padrão, qualquer pessoa com acesso físico à tela da máquina virtual do pfSense encontra o menu de console aberto (podendo resetar a senha de `admin` na opção `3`).
    - Marque a opção **`Password protect the console menu`** para exigir usuário e senha antes de exibir o menu do console físico.
 
-![Ativando Password protect the console menu no pfSense](imagens/06-firewall/22-pfsense-advanced-console.png)
+![Ativando Password protect the console menu no pfSense](imagens/07-firewall/22-pfsense-advanced-console.png)
 
 ---
 
@@ -217,12 +217,12 @@ Ainda em **`System` > `Advanced`**, clique na aba **`Networking`**:
 1. **Controle de IPv6 (`IPv6 Options`):**
    - A opção **`Allow IPv6`** vem marcada por padrão. Caso sua rede de laboratório opere exclusivamente em IPv4 e você queira bloquear todo o tráfego IPv6 sem precisar criar dezenas de regras manuais, basta desmarcar essa opção.
 
-![Configuração da opção Allow IPv6 na aba Networking](imagens/06-firewall/23-pfsense-advanced-ipv6.png)
+![Configuração da opção Allow IPv6 na aba Networking](imagens/07-firewall/23-pfsense-advanced-ipv6.png)
 
 2. **Supressão de Logs de Mudança de MAC (`ARP Handling`):**
    - Na seção **ARP Handling**, a opção **`Suppress ARP messages`** permite silenciar mensagens excessivas de log quando dispositivos compartilham ou trocam endereços MAC na rede local. Clique em **`Save`** ao concluir.
 
-![Configuração de Suppress ARP messages na aba Networking](imagens/06-firewall/24-pfsense-advanced-arp.png)
+![Configuração de Suppress ARP messages na aba Networking](imagens/07-firewall/24-pfsense-advanced-arp.png)
 
 ---
 
@@ -591,5 +591,5 @@ No hipervisor:
 
 ---
 
-[← Voltar para 05 · Usuários](05-usuarios.md) · [README](../README.md) · [Avançar para 07 · DHCP →](07-dhcp.md)
+[← Voltar para 06 · Servidor FTP](06-ftp.md) · [README](../README.md) · [Avançar para 08 · DHCP →](08-dhcp.md)
 

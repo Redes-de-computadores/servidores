@@ -40,7 +40,7 @@ As funções de domínio e o DNS necessário à associação são detalhados no 
 
 ## Configurar DNS dos clientes
 
-Máquinas do domínio devem consultar o DNS do domínio, capaz de responder aos registros de serviço. No [servidor DHCP](07-dhcp.md), altere o valor da opção `domain-name-servers` para `192.168.50.20`, teste a configuração, reinicie o serviço e renove a concessão dos clientes.
+Máquinas do domínio devem consultar o DNS do domínio, capaz de responder aos registros de serviço. No [servidor DHCP](08-dhcp.md), altere o valor da opção `domain-name-servers` para `192.168.50.20`, teste a configuração, reinicie o serviço e renove a concessão dos clientes.
 
 Não anuncie um DNS público como alternativa indiferenciada: ele não conhece o diretório interno. A resolução externa deve ser encaminhada pelo DNS do domínio. Evite laço de encaminhamento: UCS não deve encaminhar para pfSense se o pfSense encaminhar todas as consultas de volta para UCS.
 

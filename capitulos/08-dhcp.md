@@ -1,6 +1,6 @@
-# 07 · Servidor DHCP no Debian 13 (Trixie): ISC DHCP e Kea DHCP
+# 08 · Servidor DHCP no Debian 13 (Trixie): ISC DHCP e Kea DHCP
 
-[← 06 · Firewall](06-firewall.md) · [README](../README.md) · [Próximo: Backup →](08-backup.md)
+[← 07 · Firewall](07-firewall.md) · [README](../README.md) · [Próximo: Backup →](09-backup.md)
 
 ## Objetivo e Competências
 
@@ -485,5 +485,5 @@ No hipervisor:
 
 ---
 
-[← Voltar para 06 · Firewall](06-firewall.md) · [README](../README.md) · [Avançar para 08 · Backup →](08-backup.md)
+[← Voltar para 07 · Firewall](07-firewall.md) · [README](../README.md) · [Avançar para 09 · Backup →](09-backup.md)
 

@@ -1,6 +1,6 @@
 # 05 · Administração de Usuários, Grupos e Permissões no Debian 13 (Trixie)
 
-[← 04 · SSH](04-ssh.md) · [README](../README.md) · [Próximo: Firewall →](06-firewall.md)
+[← 04 · SSH](04-ssh.md) · [README](../README.md) · [Próximo: Servidor FTP →](06-ftp.md)
 
 ## Objetivo e Competências
 
@@ -689,4 +689,4 @@ No hipervisor:
 
 ---
 
-[← Voltar para 04 · SSH](04-ssh.md) · [README](../README.md) · [Avançar para 06 · Firewall →](06-firewall.md)
+[← Voltar para 04 · SSH](04-ssh.md) · [README](../README.md) · [Avançar para 06 · Servidor FTP →](06-ftp.md)

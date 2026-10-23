@@ -1,6 +1,6 @@
 # 10 · Logs e MariaDB
 
-[← Arquivos](09-arquivos.md) · [README](../README.md) · [Segurança →](11-seguranca.md)
+[← 09 · Backup](09-backup.md) · [README](../README.md) · [Próximo: Segurança →](11-seguranca.md)
 
 ## Conceitos e objetivo
 
@@ -125,3 +125,7 @@ Use um banco de restauração ainda inexistente; não repita o `CREATE DATABASE`
 Este pipeline didático não oferece fila persistente, garantia de entrega ou política de retenção. Antes de centralizar logs reais, planeje armazenamento, índices, filas, comportamento em falhas, transporte protegido, acesso e prazo de retenção. Logs podem conter dados pessoais e credenciais expostas por aplicações.
 
 **Exercício:** pare o banco brevemente, envie uma mensagem e observe o rsyslog. Reinicie o banco e registre o que aconteceu, sem pressupor que mensagens foram preservadas.
+
+---
+
+[← Voltar para 09 · Backup](09-backup.md) · [README](../README.md) · [Avançar para 11 · Segurança →](11-seguranca.md)

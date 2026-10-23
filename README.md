@@ -21,10 +21,10 @@ Você pode começar mesmo que nunca tenha administrado um sistema Linux. Neste g
 | 03 | [Configurações de rede](capitulos/03-rede.md) | Configurar IP estático, gateway, DNS, interfaces e diagnóstico por camadas |
 | 04 | [Acesso remoto com SSH](capitulos/04-ssh.md) | Acessar o servidor com autenticação por par de chaves e transferir arquivos |
 | 05 | [Usuários, grupos e permissões](capitulos/05-usuarios.md) | Administrar contas, grupos e compartilhar diretórios departamentais |
-| 06 | [Firewall com pfSense, nftables e iptables](capitulos/06-firewall.md) | Instalar e configurar o pfSense, NAT e filtragem de pacotes no Debian 13 |
-| 07 | [Servidor DHCP (ISC DHCP e Kea)](capitulos/07-dhcp.md) | Distribuir configurações de rede e reservas por MAC aos clientes |
-| 08 | [Backup e agendamento](capitulos/08-backup.md) | Criar, agendar e restaurar uma cópia de arquivos |
-| 09 | [Transferência de arquivos: SFTP e FTP](capitulos/09-arquivos.md) | Transferir arquivos e distinguir os protocolos |
+| 06 | [Servidor FTP](capitulos/06-ftp.md) | Configurar o servidor vsftpd e transferir arquivos via Windows Explorer |
+| 07 | [Firewall com pfSense, nftables e iptables](capitulos/07-firewall.md) | Instalar e configurar o pfSense, NAT e filtragem de pacotes no Debian 13 |
+| 08 | [Servidor DHCP (ISC DHCP e Kea)](capitulos/08-dhcp.md) | Distribuir configurações de rede e reservas por MAC aos clientes |
+| 09 | [Backup e agendamento](capitulos/09-backup.md) | Criar, agendar e restaurar uma cópia de arquivos |
 | 10 | [Logs e MariaDB](capitulos/10-logs-mariadb.md) | Investigar eventos e registrar mensagens em banco |
 | 11 | [Segurança e diagnóstico](capitulos/11-seguranca.md) | Revisar a exposição e resolver falhas por evidências |
 | 12 | [Domínio com Univention Corporate Server](capitulos/12-ucs.md) | Montar um domínio de laboratório e validar o DNS |
@@ -33,10 +33,10 @@ Você pode começar mesmo que nunca tenha administrado um sistema Linux. Neste g
 flowchart LR
     A[00 Instalação e 01 Comandos/Vim] --> B[02 Pacotes e 03 Rede]
     B --> C[04 SSH e 05 Usuários]
-    C --> D[06 Firewall e 07 DHCP]
-    D --> E[08 Backup e 09 Arquivos]
-    E --> F[10 Logs e 11 Segurança]
-    F --> G[12 Domínio UCS]
+    C --> D[06 Servidor FTP]
+    D --> E[07 Firewall e 08 DHCP]
+    E --> F[09 Backup e 10 Logs]
+    F --> G[11 Segurança e 12 UCS]
 ```
 
 ## Como usar os procedimentos
