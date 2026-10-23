@@ -6,7 +6,7 @@
 
 Backup é uma cópia recuperável. **RPO** representa quanto dado você admite perder em tempo; **RTO**, quanto tempo pode levar para recuperar o serviço. Uma cópia no mesmo disco ajuda a estudar, mas não protege da perda desse disco. Planeje cópias em outro equipamento e uma cópia isolada ou externa.
 
-Pré-requisitos: diretório `/srv/empresa` do capítulo 05, acesso ao sudo e espaço livre. Aqui será feito um arquivo compactado diário; bases de dados terão procedimento próprio.
+Pré-requisitos: diretório `/srv/empresa` do capítulo 04, acesso ao sudo e espaço livre. Aqui será feito um arquivo compactado diário; bases de dados terão procedimento próprio.
 
 ## Preparar e executar um script
 

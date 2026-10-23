@@ -1,6 +1,6 @@
-# 05 · Administração de Usuários, Grupos e Permissões no Debian 13 (Trixie)
+# 04 · Administração de Usuários, Grupos e Permissões no Debian 13 (Trixie)
 
-[← 04 · SSH](04-ssh.md) · [README](../README.md) · [Próximo: Servidor FTP →](06-ftp.md)
+[← 03 · Rede](03-rede.md) · [README](../README.md) · [Próximo: SSH →](05-ssh.md)
 
 ## Objetivo e Competências
 
@@ -179,6 +179,7 @@ w
 ## 3. Adicionando, Modificando e Padronizando Contas de Usuários
 
 No Debian, existem dois utilitários para criação de contas:
+
 - **`useradd`:** Binário de baixo nível padrão POSIX. Se executado sem parâmetros, não cria diretório `HOME` nem pede senha interativamente (a menos que seja usada a flag `-m`).
 - **`adduser`:** Script interativo de alto nível oficial do Debian (escrito em Perl) que cria automaticamente o grupo primário, copia os arquivos de `/etc/skel` para `/home/usuario`, ajusta permissões e solicita a senha e dados cadastrais (GECOS).
 
@@ -555,7 +556,7 @@ sudo chmod 770 Vendas
 ls -l /srv/empresa
 ```
 
-![Listagem das permissões departamentais isoladas em /srv/empresa](imagens/05-usuarios/01-permissoes-departamentais.png)
+![Listagem das permissões departamentais isoladas em /srv/empresa](imagens/04-usuarios/01-permissoes-departamentais.png)
 
 ---
 
@@ -627,7 +628,7 @@ sudo chmod 2770 Financeiro Infra Vendas
 ls -l /srv/empresa
 ```
 
-![Aplicação de permissões especiais SGID nas pastas departamentais](imagens/05-usuarios/02-permissoes-especiais.png)
+![Aplicação de permissões especiais SGID nas pastas departamentais](imagens/04-usuarios/02-permissoes-especiais.png)
 
 > [!TIP]
 > Observe na listagem `drwxrws---` que o `x` do grupo foi substituído por um **`s` minúsculo**. Se aparecesse um **`S` maiúsculo** (`drwxrwS---`), significaria que o bit SGID foi ativado, mas faltou a permissão de execução/travessia (`x`) para o grupo.
@@ -689,4 +690,4 @@ No hipervisor:
 
 ---
 
-[← Voltar para 04 · SSH](04-ssh.md) · [README](../README.md) · [Avançar para 06 · Servidor FTP →](06-ftp.md)
+[← Voltar para 03 · Rede](03-rede.md) · [README](../README.md) · [Avançar para 05 · SSH →](05-ssh.md)

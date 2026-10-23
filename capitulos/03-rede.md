@@ -1,6 +1,6 @@
 # 03 · Configurações de Rede no Debian 13 (Trixie)
 
-[← 02 · Pacotes](02-pacotes.md) · [README](../README.md) · [Próximo: SSH →](04-ssh.md)
+[← 02 · Pacotes](02-pacotes.md) · [README](../README.md) · [Próximo: Usuários →](04-usuarios.md)
 
 ## Objetivo e Competências
 
@@ -720,14 +720,14 @@ sudo poweroff
 ```
 
 No menu de Snapshots do seu hipervisor:
-- **Nome do Snapshot:** `01-Rede-Estatica-Configurada`
+- **Nome do Snapshot:** `03-Rede-Estatica-Configurada`
 - **Descrição:** *Endereço IP estático 192.168.50.10/24 configurado no interfaces, gateway 192.168.50.1 funcional, DNS resolvendo e hostname srv01.lab.local devidamente mapeado no hosts.*
 
 ---
 
 ## 11. Checklist de Validação do Estudante
 
-Antes de avançar para o **Capítulo 02 · Gerenciamento de Pacotes**, confirme o cumprimento de cada item:
+Antes de avançar para o **Capítulo 04 · Administração de Usuários, Grupos e Permissões**, confirme o cumprimento de cada item:
 
 - [ ] Realizou backup do arquivo `/etc/network/interfaces` e auditou com `diff -u`.
 - [ ] O comando `ip -br link` confirma a interface principal com status `UP`.
@@ -736,7 +736,7 @@ Antes de avançar para o **Capítulo 02 · Gerenciamento de Pacotes**, confirme 
 - [ ] O arquivo `/etc/resolv.conf` aponta para os servidores DNS válidos e `getent hosts debian.org` resolve com sucesso.
 - [ ] Os comandos `hostname -s` e `hostname -f` retornam respectivamente `srv01` e `srv01.lab.local`.
 - [ ] Testou a manipulação dinâmica de rotas (`ip route del/add`) e o conceito de alias virtual (`label`).
-- [ ] O snapshot `01-Rede-Estatica-Configurada` foi criado no hipervisor.
+- [ ] O snapshot `03-Rede-Estatica-Configurada` foi criado no hipervisor.
 
 ---
 
@@ -760,5 +760,5 @@ Antes de avançar para o **Capítulo 02 · Gerenciamento de Pacotes**, confirme 
 
 ---
 
-[← Voltar para 02 · Pacotes](02-pacotes.md) · [README](../README.md) · [Avançar para 04 · SSH →](04-ssh.md)
+[← Voltar para 02 · Pacotes](02-pacotes.md) · [README](../README.md) · [Avançar para 04 · Usuários →](04-usuarios.md)
 

@@ -1,6 +1,6 @@
-# 04 · Acesso Remoto com SSH no Debian 13 (Trixie)
+# 05 · Acesso Remoto com SSH no Debian 13 (Trixie)
 
-[← 03 · Rede](03-rede.md) · [README](../README.md) · [Próximo: Usuários →](05-usuarios.md)
+[← 04 · Usuários](04-usuarios.md) · [README](../README.md) · [Próximo: Servidor FTP →](06-ftp.md)
 
 ## Objetivo e Competências
 
@@ -565,7 +565,7 @@ sudo poweroff
 ```
 
 No seu hipervisor (VirtualBox, VMware, Proxmox):
-- **Nome do Snapshot:** `03-SSH-Chaves-Configuradas`
+- **Nome do Snapshot:** `05-SSH-Chaves-Configuradas`
 - **Descrição:** *Servidor SSH ativo na porta 22 no IP 192.168.50.10, login de root desativado, autenticação exclusiva por chave pública Ed25519/RSA configurada e login por senha bloqueado.*
 
 ---
@@ -583,7 +583,7 @@ Antes de avançar para o próximo capítulo da trilha, confirme cada um dos requ
 - [ ] A conexão remota por chave autentica com sucesso sem solicitar a senha do usuário do Linux.
 - [ ] A diretiva `PasswordAuthentication no` foi ativada e tentativas de login com senha convencional são rejeitadas.
 - [ ] Testou a transferência de arquivos via `scp` ou `sftp`.
-- [ ] O snapshot `03-SSH-Chaves-Configuradas` foi registrado no hipervisor.
+- [ ] O snapshot `05-SSH-Chaves-Configuradas` foi registrado no hipervisor.
 
 ---
 
@@ -606,5 +606,5 @@ Antes de avançar para o próximo capítulo da trilha, confirme cada um dos requ
 
 ---
 
-[← Voltar para 03 · Rede](03-rede.md) · [README](../README.md) · [Avançar para 05 · Usuários →](05-usuarios.md)
+[← Voltar para 04 · Usuários](04-usuarios.md) · [README](../README.md) · [Avançar para 06 · Servidor FTP →](06-ftp.md)
 

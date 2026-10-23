@@ -19,8 +19,8 @@ Você pode começar mesmo que nunca tenha administrado um sistema Linux. Neste g
 | 01 | [Comandos básicos e editor Vim](capitulos/01-comandos-vim.md) | Navegar no terminal, entender o FHS e dominar o editor Vim |
 | 02 | [Gerenciamento de pacotes](capitulos/02-pacotes.md) | Instalar, atualizar e investigar programas com APT e dpkg |
 | 03 | [Configurações de rede](capitulos/03-rede.md) | Configurar IP estático, gateway, DNS, interfaces e diagnóstico por camadas |
-| 04 | [Acesso remoto com SSH](capitulos/04-ssh.md) | Acessar o servidor com autenticação por par de chaves e transferir arquivos |
-| 05 | [Usuários, grupos e permissões](capitulos/05-usuarios.md) | Administrar contas, grupos e compartilhar diretórios departamentais |
+| 04 | [Usuários, grupos e permissões](capitulos/04-usuarios.md) | Administrar contas, grupos e compartilhar diretórios departamentais |
+| 05 | [Acesso remoto com SSH](capitulos/05-ssh.md) | Acessar o servidor com autenticação por par de chaves e transferir arquivos |
 | 06 | [Servidor FTP](capitulos/06-ftp.md) | Configurar o servidor vsftpd e transferir arquivos via Windows Explorer |
 | 07 | [Firewall com pfSense, nftables e iptables](capitulos/07-firewall.md) | Instalar e configurar o pfSense, NAT e filtragem de pacotes no Debian 13 |
 | 08 | [Servidor DHCP (ISC DHCP e Kea)](capitulos/08-dhcp.md) | Distribuir configurações de rede e reservas por MAC aos clientes |
@@ -32,7 +32,7 @@ Você pode começar mesmo que nunca tenha administrado um sistema Linux. Neste g
 ```mermaid
 flowchart LR
     A[00 Instalação e 01 Comandos/Vim] --> B[02 Pacotes e 03 Rede]
-    B --> C[04 SSH e 05 Usuários]
+    B --> C[04 Usuários e 05 SSH]
     C --> D[06 Servidor FTP]
     D --> E[07 Firewall e 08 DHCP]
     E --> F[09 Backup e 10 Logs]

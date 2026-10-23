@@ -1,6 +1,6 @@
 # 06 · Configuração do Servidor FTP no Debian 13 e Acesso via Windows Explorer
 
-[← 05 · Usuários](05-usuarios.md) · [README](../README.md) · [Próximo: Firewall →](07-firewall.md)
+[← 05 · SSH](05-ssh.md) · [README](../README.md) · [Próximo: Firewall →](07-firewall.md)
 
 ## Objetivo e Competências
 
@@ -65,7 +65,7 @@ Diferente da maioria dos serviços (como a Web HTTP que usa apenas a porta 80 ou
 | :--- | :--- | :--- | :--- | :--- |
 | **FTP Tradicional** | Protocolo FTP puro (RFC 959) | Texto claro (sem criptografia) | TCP 21 + portas passivas | Redes locais isoladas, equipamentos legados, aprendizado em laboratório. |
 | **FTPS** | FTP encapsulado em SSL/TLS | Criptografado com certificado | TCP 21 + 990 + portas passivas | Transferência FTP segura em internet pública exigindo certificados TLS. |
-| **SFTP** | Subsistema do SSH (OpenSSH) | Criptografia nativa do SSH | TCP 22 (apenas uma porta) | Administração moderna de sistemas via SSH (visto no Capítulo 04). |
+| **SFTP** | Subsistema do SSH (OpenSSH) | Criptografia nativa do SSH | TCP 22 (apenas uma porta) | Administração moderna de sistemas via SSH (visto no Capítulo 05). |
 
 > [!NOTE]
 > Neste capítulo configuramos o **FTP tradicional** no laboratório da rede interna `LAB` (`192.168.50.0/24`), pois ele é nativamente suportado pelo **Windows Explorer** sem a necessidade de instalar nenhum programa adicional no Windows.
@@ -424,4 +424,4 @@ Antes de avançar para o **Capítulo 07 · Firewall**, confirme que você realiz
 
 ---
 
-[← Voltar para 05 · Usuários](05-usuarios.md) · [README](../README.md) · [Avançar para 07 · Firewall →](07-firewall.md)
+[← Voltar para 05 · SSH](05-ssh.md) · [README](../README.md) · [Avançar para 07 · Firewall →](07-firewall.md)

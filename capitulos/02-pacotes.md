@@ -55,7 +55,7 @@ Um dos arquivos pode não existir: instalações diferentes usam `/etc/apt/sourc
 
 ## Serviços e validação
 
-Quando instalar SSH no capítulo 04, compare:
+Quando instalar SSH no capítulo 05, compare:
 
 ```bash
 systemctl status ssh --no-pager
