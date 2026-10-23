@@ -1,6 +1,6 @@
 # 00 · Instalação do Debian 13 (Trixie) no Laboratório
 
-[← README](../README.md) · [Próximo: Rede →](01-rede.md)
+[← README](../README.md) · [Próximo: 01 · Comandos Básicos e Vim →](01-comandos-vim.md)
 
 ## Objetivo
 
@@ -146,7 +146,7 @@ O instalador carregará automaticamente os módulos de kernel e identificará os
 ![Detecção de Rede](imagens/00-instalacao/05-detectar-rede.png)
 
 - Se a máquina virtual estiver conectada ao modo **NAT**, o instalador obterá automaticamente uma concessão de endereço IP via DHCP para permitir a comunicação com os servidores Debian na internet.
-- Se a rede não possuir servidor DHCP, o instalador apresentará uma tela solicitando configuração manual de IP, máscara e gateway (detalhada no [Capítulo 01](01-rede.md)).
+- Se a rede não possuir servidor DHCP, o instalador apresentará uma tela solicitando configuração manual de IP, máscara e gateway (detalhada no [Capítulo 03](03-rede.md)).
 
 ---
 
@@ -463,5 +463,5 @@ Antes de avançar para o próximo capítulo da trilha, confirme cada um dos iten
 
 ---
 
-[← Voltar ao README](../README.md) · [Avançar para 01 - Configurações de Rede →](01-rede.md)
+[← Voltar ao README](../README.md) · [Avançar para 01 · Comandos Básicos e Vim →](01-comandos-vim.md)
 

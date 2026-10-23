@@ -1,6 +1,6 @@
-# 03 · Acesso Remoto com SSH no Debian 13 (Trixie)
+# 04 · Acesso Remoto com SSH no Debian 13 (Trixie)
 
-[← 02 · Pacotes](02-pacotes.md) · [README](../README.md) · [Próximo: Usuários →](04-usuarios.md)
+[← 03 · Rede](03-rede.md) · [README](../README.md) · [Próximo: Usuários →](05-usuarios.md)
 
 ## Objetivo e Competências
 
@@ -599,4 +599,8 @@ Antes de avançar para o próximo capítulo da trilha, confirme cada um dos requ
 - [OpenSSH Official Documentation — ssh-keygen(1)](https://manpages.debian.org/trixie/openssh-client/ssh-keygen.1.en.html)
 - [OpenSSH Official Documentation — ssh(1)](https://manpages.debian.org/trixie/openssh-client/ssh.1.en.html)
 - [Debian 13 (Trixie) Release Notes — Deprecated Cryptographic Algorithms](https://www.debian.org/releases/trixie/release-notes/)
+
+---
+
+[← Voltar para 03 · Rede](03-rede.md) · [README](../README.md) · [Avançar para 05 · Usuários →](05-usuarios.md)
 

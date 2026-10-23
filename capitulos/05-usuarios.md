@@ -1,6 +1,6 @@
-# 04 · Administração de Usuários, Grupos e Permissões no Debian 13 (Trixie)
+# 05 · Administração de Usuários, Grupos e Permissões no Debian 13 (Trixie)
 
-[← 03 · SSH](03-ssh.md) · [README](../README.md) · [Próximo: Firewall →](05-firewall.md)
+[← 04 · SSH](04-ssh.md) · [README](../README.md) · [Próximo: Firewall →](06-firewall.md)
 
 ## Objetivo e Competências
 
@@ -554,7 +554,7 @@ sudo chmod 770 Vendas
 ls -l /srv/empresa
 ```
 
-![Listagem das permissões departamentais isoladas em /srv/empresa](imagens/04-usuarios/01-permissoes-departamentais.png)
+![Listagem das permissões departamentais isoladas em /srv/empresa](imagens/05-usuarios/01-permissoes-departamentais.png)
 
 ---
 
@@ -626,7 +626,7 @@ sudo chmod 2770 Financeiro Infra Vendas
 ls -l /srv/empresa
 ```
 
-![Aplicação de permissões especiais SGID nas pastas departamentais](imagens/04-usuarios/02-permissoes-especiais.png)
+![Aplicação de permissões especiais SGID nas pastas departamentais](imagens/05-usuarios/02-permissoes-especiais.png)
 
 > [!TIP]
 > Observe na listagem `drwxrws---` que o `x` do grupo foi substituído por um **`s` minúsculo**. Se aparecesse um **`S` maiúsculo** (`drwxrwS---`), significaria que o bit SGID foi ativado, mas faltou a permissão de execução/travessia (`x`) para o grupo.
@@ -685,3 +685,7 @@ No hipervisor:
 - [Debian Manpages (Trixie) — usermod(8)](https://manpages.debian.org/trixie/passwd/usermod.8.en.html)
 - [Debian Manpages (Trixie) — chage(1)](https://manpages.debian.org/trixie/passwd/chage.1.en.html)
 - [Debian Manpages (Trixie) — chmod(1)](https://manpages.debian.org/trixie/coreutils/chmod.1.en.html)
+
+---
+
+[← Voltar para 04 · SSH](04-ssh.md) · [README](../README.md) · [Avançar para 06 · Firewall →](06-firewall.md)

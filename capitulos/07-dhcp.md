@@ -1,6 +1,6 @@
-# 06 · Servidor DHCP no Debian 13 (Trixie): ISC DHCP e Kea DHCP
+# 07 · Servidor DHCP no Debian 13 (Trixie): ISC DHCP e Kea DHCP
 
-[← 05 · Firewall](05-firewall.md) · [README](../README.md) · [Próximo: Backup →](08-backup.md)
+[← 06 · Firewall](06-firewall.md) · [README](../README.md) · [Próximo: Backup →](08-backup.md)
 
 ## Objetivo e Competências
 
@@ -482,4 +482,8 @@ No hipervisor:
 - [Debian Manpages (Trixie) — dhcpd.conf(5)](https://manpages.debian.org/trixie/isc-dhcp-server/dhcpd.conf.5.en.html)
 - [Debian Manpages (Trixie) — kea-dhcp4(8)](https://manpages.debian.org/trixie/kea-dhcp4-server/kea-dhcp4.8.en.html)
 - [Debian 13 (Trixie) Release Notes — Transition from ISC DHCP to Kea](https://www.debian.org/releases/trixie/release-notes/)
+
+---
+
+[← Voltar para 06 · Firewall](06-firewall.md) · [README](../README.md) · [Avançar para 08 · Backup →](08-backup.md)
 

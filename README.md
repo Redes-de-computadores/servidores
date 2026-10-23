@@ -15,27 +15,28 @@ Você pode começar mesmo que nunca tenha administrado um sistema Linux. Neste g
 
 | Ordem | Capítulo | Ao concluir, você conseguirá… |
 | :---: | --- | --- |
-| 00 | [Instalação do Debian 13 e Laboratório](capitulos/00-instalacao.md) | Instalar o Debian 13 (Trixie) passo a passo com imagens oficiais e preparar a VM |
-| 01 | [Configurações de rede](capitulos/01-rede.md) | Configurar IP estático, gateway, DNS, interfaces e diagnóstico por camadas |
-| 02 | [Gerenciamento de pacotes](capitulos/02-pacotes.md) | Instalar, atualizar e investigar programas |
-| 03 | [Acesso remoto com SSH](capitulos/03-ssh.md) | Acessar o servidor com autenticação por par de chaves e transferir arquivos |
-| 04 | [Usuários, grupos e permissões](capitulos/04-usuarios.md) | Administrar contas, grupos e compartilhar diretórios departamentais |
-| 05 | [Firewall com pfSense, nftables e iptables](capitulos/05-firewall.md) | Instalar e configurar o pfSense, NAT e filtragem de pacotes no Debian 13 |
-| 06 | [Servidor DHCP (ISC DHCP e Kea)](capitulos/06-dhcp.md) | Distribuir configurações de rede e reservas por MAC aos clientes |
-| 07 | [Backup e agendamento](capitulos/08-backup.md) | Criar, agendar e restaurar uma cópia de arquivos |
-| 08 | [Transferência de arquivos: SFTP e FTP](capitulos/09-arquivos.md) | Transferir arquivos e distinguir os protocolos |
-| 09 | [Logs e MariaDB](capitulos/10-logs-mariadb.md) | Investigar eventos e registrar mensagens em banco |
-| 10 | [Segurança e diagnóstico](capitulos/11-seguranca.md) | Revisar a exposição e resolver falhas por evidências |
-| 11 | [Domínio com Univention Corporate Server](capitulos/12-ucs.md) | Montar um domínio de laboratório e validar o DNS |
+| 00 | [Instalação do Debian 13](capitulos/00-instalacao.md) | Instalar o Debian 13 (Trixie) passo a passo com imagens oficiais e preparar a VM |
+| 01 | [Comandos básicos e editor Vim](capitulos/01-comandos-vim.md) | Navegar no terminal, entender o FHS e dominar o editor Vim |
+| 02 | [Gerenciamento de pacotes](capitulos/02-pacotes.md) | Instalar, atualizar e investigar programas com APT e dpkg |
+| 03 | [Configurações de rede](capitulos/03-rede.md) | Configurar IP estático, gateway, DNS, interfaces e diagnóstico por camadas |
+| 04 | [Acesso remoto com SSH](capitulos/04-ssh.md) | Acessar o servidor com autenticação por par de chaves e transferir arquivos |
+| 05 | [Usuários, grupos e permissões](capitulos/05-usuarios.md) | Administrar contas, grupos e compartilhar diretórios departamentais |
+| 06 | [Firewall com pfSense, nftables e iptables](capitulos/06-firewall.md) | Instalar e configurar o pfSense, NAT e filtragem de pacotes no Debian 13 |
+| 07 | [Servidor DHCP (ISC DHCP e Kea)](capitulos/07-dhcp.md) | Distribuir configurações de rede e reservas por MAC aos clientes |
+| 08 | [Backup e agendamento](capitulos/08-backup.md) | Criar, agendar e restaurar uma cópia de arquivos |
+| 09 | [Transferência de arquivos: SFTP e FTP](capitulos/09-arquivos.md) | Transferir arquivos e distinguir os protocolos |
+| 10 | [Logs e MariaDB](capitulos/10-logs-mariadb.md) | Investigar eventos e registrar mensagens em banco |
+| 11 | [Segurança e diagnóstico](capitulos/11-seguranca.md) | Revisar a exposição e resolver falhas por evidências |
+| 12 | [Domínio com Univention Corporate Server](capitulos/12-ucs.md) | Montar um domínio de laboratório e validar o DNS |
 
 ```mermaid
 flowchart LR
-    A[00 Instalação e 01 Rede] --> B[02 Pacotes e 03 SSH]
-    B --> C[04 Usuários e 05 Firewall]
-    C --> D[06 DHCP e 08 Arquivos]
-    C --> E[07 Backup e 09 Logs]
-    D --> F[10 Segurança e 11 UCS]
-    E --> F
+    A[00 Instalação e 01 Comandos/Vim] --> B[02 Pacotes e 03 Rede]
+    B --> C[04 SSH e 05 Usuários]
+    C --> D[06 Firewall e 07 DHCP]
+    D --> E[08 Backup e 09 Arquivos]
+    E --> F[10 Logs e 11 Segurança]
+    F --> G[12 Domínio UCS]
 ```
 
 ## Como usar os procedimentos

@@ -1,6 +1,6 @@
 # 02 · Gerenciamento de pacotes
 
-[← Rede](01-rede.md) · [README](../README.md) · [SSH →](03-ssh.md)
+[← 01 · Comandos Básicos e Vim](01-comandos-vim.md) · [README](../README.md) · [Próximo: Rede →](03-rede.md)
 
 ## Conceitos
 
@@ -55,7 +55,7 @@ Um dos arquivos pode não existir: instalações diferentes usam `/etc/apt/sourc
 
 ## Serviços e validação
 
-Quando instalar SSH no capítulo 05, compare:
+Quando instalar SSH no capítulo 04, compare:
 
 ```bash
 systemctl status ssh --no-pager
@@ -66,3 +66,7 @@ journalctl -u ssh -n 30 --no-pager
 `status` mostra o estado atual; `is-enabled` informa se o serviço está configurado para iniciar automaticamente. Um pacote instalado não garante que seu serviço esteja ativo.
 
 **Exercício:** instale `tree`, execute `tree -L 1 /etc`, localize o executável com `command -v tree` e descubra qual pacote o fornece com `dpkg -S /usr/bin/tree`. Explique o que mudou entre atualizar o índice e instalar o programa.
+
+---
+
+[← Voltar para 01 · Comandos Básicos e Vim](01-comandos-vim.md) · [README](../README.md) · [Avançar para 03 · Rede →](03-rede.md)

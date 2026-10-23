@@ -1,6 +1,6 @@
-# 01 · Configurações de Rede no Debian 13 (Trixie)
+# 03 · Configurações de Rede no Debian 13 (Trixie)
 
-[← 00 · Instalação](00-instalacao.md) · [README](../README.md) · [Próximo: Pacotes →](02-pacotes.md)
+[← 02 · Pacotes](02-pacotes.md) · [README](../README.md) · [Próximo: SSH →](04-ssh.md)
 
 ## Objetivo e Competências
 
@@ -70,7 +70,7 @@ diff -u /etc/network/interfaces.ori /etc/network/interfaces
 ### Topologia do ambiente
 Em um ambiente corporativo ou doméstico de pequeno porte, o servidor Linux localiza-se dentro de uma rede interna privada (*Intranet*), conectado a um roteador/modem com firewall integrado que fornece a conexão externa para a *Internet*.
 
-![Diagrama da Rede](imagens/01-rede/01-diagrama-rede.png)
+![Diagrama da Rede](imagens/03-rede/01-diagrama-rede.png)
 
 No nosso laboratório didático de máquinas virtuais, essa arquitetura é reproduzida conectando o servidor `srv01` à **Rede Interna (`LAB`)**, tendo o firewall pfSense como gateway padrão:
 
@@ -145,7 +145,7 @@ No **Debian 13 (Trixie)**, a antiga suíte `net-tools` (`ifconfig`, `netstat`, `
 
 ### Inspecionando o estado atual da rede
 
-![Inspeção das Interfaces de Rede no Terminal](imagens/01-rede/03-identificar-interfaces.png)
+![Inspeção das Interfaces de Rede no Terminal](imagens/03-rede/03-identificar-interfaces.png)
 
 Execute os comandos abaixo para identificar o nome real da placa de rede da sua VM e verificar o endereçamento temporário recebido via DHCP na instalação:
 
@@ -282,7 +282,7 @@ iface enp0s3 inet static
 
 Salve o arquivo pressionando `Ctrl+O`, tecle `Enter` e saia com `Ctrl+X`.
 
-![Edição e Aplicação de /etc/network/interfaces](imagens/01-rede/04-arquivo-interfaces.png)
+![Edição e Aplicação de /etc/network/interfaces](imagens/03-rede/04-arquivo-interfaces.png)
 
 ---
 
@@ -402,7 +402,7 @@ ff02::2 ip6-allrouters
 > [!IMPORTANT]
 > A linha `192.168.50.10 srv01.lab.local srv01` deve relacionar o IP fixo da máquina ao seu FQDN completo primeiro e, em seguida, ao nome simples. Isso é indispensável para o correto funcionamento de serviços como MTA (Postfix/Exim), banco de dados e certificados SSL/TLS.
 
-![Resolução DNS e Mapeamento Local no /etc/hosts](imagens/01-rede/05-resolv-e-hosts.png)
+![Resolução DNS e Mapeamento Local no /etc/hosts](imagens/03-rede/05-resolv-e-hosts.png)
 
 ---
 
@@ -624,7 +624,7 @@ sudo nmcli connection show --active
 
 O ecossistema Linux possui convenções de arquivos de rede diferentes dependendo da distribuição base adotada:
 
-![Comparativo Debian vs Red Hat](imagens/01-rede/02-comparativo-debian-redhat.png)
+![Comparativo Debian vs Red Hat](imagens/03-rede/02-comparativo-debian-redhat.png)
 
 | Recurso do Sistema | Debian GNU/Linux / Ubuntu | Red Hat Enterprise Linux / CentOS / Rocky |
 | :--- | :--- | :--- |
@@ -669,7 +669,7 @@ flowchart TD
 
 ### Bateria de Testes em Camadas no Terminal:
 
-![Bateria de Testes de Conectividade por Camadas](imagens/01-rede/06-testes-conectividade.png)
+![Bateria de Testes de Conectividade por Camadas](imagens/03-rede/06-testes-conectividade.png)
 
 ```bash
 # 1. Enlace físico (Cabo conectado e placa UP)
@@ -753,5 +753,5 @@ Antes de avançar para o **Capítulo 02 · Gerenciamento de Pacotes**, confirme 
 
 ---
 
-[← Voltar para 00 · Instalação](00-instalacao.md) · [README](../README.md) · [Avançar para 02 · Pacotes →](02-pacotes.md)
+[← Voltar para 02 · Pacotes](02-pacotes.md) · [README](../README.md) · [Avançar para 04 · SSH →](04-ssh.md)
 
