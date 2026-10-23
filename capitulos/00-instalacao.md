@@ -461,3 +461,7 @@ Antes de avançar para o próximo capítulo da trilha, confirme cada um dos iten
 - [Debian CD/DVD Verification Guide](https://www.debian.org/CD/verify)
 - [Debian Edu Trixie Installation Tour](https://wiki.debian.org/DebianEdu/Documentation/Trixie/Installation)
 
+---
+
+[← Voltar ao README](../README.md) · [Avançar para 01 - Configurações de Rede →](01-rede.md)
+

@@ -145,6 +145,8 @@ No **Debian 13 (Trixie)**, a antiga suíte `net-tools` (`ifconfig`, `netstat`, `
 
 ### Inspecionando o estado atual da rede
 
+![Inspeção das Interfaces de Rede no Terminal](imagens/01-rede/03-identificar-interfaces.png)
+
 Execute os comandos abaixo para identificar o nome real da placa de rede da sua VM e verificar o endereçamento temporário recebido via DHCP na instalação:
 
 ```bash
@@ -280,6 +282,8 @@ iface enp0s3 inet static
 
 Salve o arquivo pressionando `Ctrl+O`, tecle `Enter` e saia com `Ctrl+X`.
 
+![Edição e Aplicação de /etc/network/interfaces](imagens/01-rede/04-arquivo-interfaces.png)
+
 ---
 
 ### Aplicando a Nova Configuração com Segurança
@@ -397,6 +401,8 @@ ff02::2 ip6-allrouters
 
 > [!IMPORTANT]
 > A linha `192.168.50.10 srv01.lab.local srv01` deve relacionar o IP fixo da máquina ao seu FQDN completo primeiro e, em seguida, ao nome simples. Isso é indispensável para o correto funcionamento de serviços como MTA (Postfix/Exim), banco de dados e certificados SSL/TLS.
+
+![Resolução DNS e Mapeamento Local no /etc/hosts](imagens/01-rede/05-resolv-e-hosts.png)
 
 ---
 
@@ -663,6 +669,8 @@ flowchart TD
 
 ### Bateria de Testes em Camadas no Terminal:
 
+![Bateria de Testes de Conectividade por Camadas](imagens/01-rede/06-testes-conectividade.png)
+
 ```bash
 # 1. Enlace físico (Cabo conectado e placa UP)
 ip -br link show dev enp0s3
@@ -742,4 +750,8 @@ Antes de avançar para o **Capítulo 02 · Gerenciamento de Pacotes**, confirme 
 - [Manual Oficial man interfaces(5)](https://manpages.debian.org/trixie/ifupdown/interfaces.5.en.html)
 - [Manual Oficial man ip-address(8) e man ip-route(8)](https://manpages.debian.org/trixie/iproute2/ip.8.en.html)
 - [Manual Oficial man resolv.conf(5)](https://manpages.debian.org/trixie/manpages/resolv.conf.5.en.html)
+
+---
+
+[← Voltar para 00 · Instalação](00-instalacao.md) · [README](../README.md) · [Avançar para 02 · Pacotes →](02-pacotes.md)
 
